@@ -1,23 +1,29 @@
 const express = require("express")
+const bodyParser = require("body-parser")
+
+const mongoose = require("mongoose")
 
 const app = express()
 let port = 3000
 app.listen(port, () => {
-    console.log('servidor rodando na porta ' + port)
+    console.log(`servidor rodando na porta ${port}`)
 })
 
-app.get('/',(req,res) => {
+mongoose.connect("mongodb+srv://api-node2:123@cluster0-q3ex9.mongodb.net/<dbname>?retryWrites=true&w=majority", {useUnifiedTopology: true, useNewUrlParser: true})
 
-    res.send("Minha primeira rota")
+app.use(bodyParser.json())
 
-})
-app.get('/teste',(req,res) => {
 
-    res.send("Meu primeiro teste")
+const User = require("./src/models/user")
 
-})
-app.get('/teste/2',(req,res) => {
+app.post('/',async (req,res) => {
 
-    res.send("Meu segundo teste")
+    // coletando a requisição do client que foi uma criação.
+    const {nome, cidade, idade} = req.body
+    // passando a requisição coletada do client para o objeto user.
+    const user = await User.create({nome, cidade, idade})
+
+    // dando uma resposta para o client se a requisição foi realizada.
+    res.json({user})
 
 })
