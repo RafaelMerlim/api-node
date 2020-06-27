@@ -14,7 +14,7 @@ const cors = require("cors")
 const app = express()
 
 // Criando a porta.
-let port = 3000
+let port = process.env.PORT || 3000
 
 // colocando o servido para escutar na porta crianda.
 app.listen(port, () => {
