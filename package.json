@@ -6,7 +6,8 @@
   "author": "Rafael Merlim <rafaelmerlim7@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
