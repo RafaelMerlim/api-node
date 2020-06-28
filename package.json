@@ -4,7 +4,7 @@
   "engines": {
     "node":"12.18.1"
   },
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/RafaelMerlim/api-node.git",
   "author": "Rafael Merlim <rafaelmerlim7@gmail.com>",
   "license": "MIT",
