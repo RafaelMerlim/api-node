@@ -7,8 +7,8 @@ const express = require("express")
 const routes = express.Router()
 
 // Aqui estou importando o user constroller, onde está o comando de armazenamento do usuário e personas no bd.
-const UserController = require("./controllers/UserController")
-const PersonaController = require("./controllers/PersonaController")
+const UserController = require("./controllers/UserController.js")
+const PersonaController = require("./controllers/PersonaController.js")
 
 // CRUD USUARIOS
 routes.post('/user',UserController.create)

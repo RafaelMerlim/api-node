@@ -33,4 +33,4 @@ app.use(cors())
 
 
 // Aqui está que qualquer requisição que venha da raiz (/) será redirecionda para o routes.
-app.use("/", require("./src/routes"))
+app.use("/", require("./src/routes.js"))

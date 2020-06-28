@@ -3,7 +3,7 @@
 
 // Após criar o model (a tabela) no arquivo model.js precisamos consumir ele aqui para responder o client e salvar os dados na tabela criada.
 // E esta tabela ficará armazenada no banco de dados.
-const Persona = require("../models/Persona")
+const Persona = require("../models/Persona.js")
 
 // req e res devem ficar sempre nesta ordem.
 module.exports = {
