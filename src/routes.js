@@ -9,6 +9,11 @@ const routes = express.Router()
 // Aqui estou importando o user constroller, onde está o comando de armazenamento do usuário e personas no bd.
 const UserController = require("./controllers/UserController.js")
 const PersonaController = require("./controllers/PersonaController.js")
+const { json } = require("body-parser")
+
+routes.get('/', (req, res) => {
+    return res.json({msg:"API rodando"})
+})
 
 // CRUD USUARIOS
 routes.post('/user',UserController.create)
